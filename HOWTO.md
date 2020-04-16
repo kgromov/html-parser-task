@@ -3,11 +3,14 @@
 ### 1. IDE (IntelliJ IDEA is preferable):
 * Build project with gradle build task (or from terminal/cmd)
 * Run ParserApplication
+* Embedded Tomcat is started by Spring MVC
 
-### 2. Via cmd/terminal
+
+### 2. Deploying .war file to Docker container
 * Build project with gradle build task (or from terminal/cmd)
 * run via terminal *sh run.sh* on Unix
 * or run.bat via cmd.bat on Windows
+* Tomcat on docker container is started
 
 
 ### 3. Test application
