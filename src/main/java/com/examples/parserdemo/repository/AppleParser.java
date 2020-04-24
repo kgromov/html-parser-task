@@ -1,6 +1,7 @@
 package com.examples.parserdemo.repository;
 
 import com.examples.parserdemo.model.Item;
+import com.examples.parserdemo.model.ItemType;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -20,5 +21,10 @@ public class AppleParser implements Parser {
         String category = document.getElementById("bylineInfo").text();
         String price = document.getElementById("priceblock_ourprice").text();
         return new Item(name, category, price);
+    }
+
+    @Override
+    public ItemType getItemType() {
+        return ItemType.APPLE;
     }
 }

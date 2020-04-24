@@ -1,6 +1,7 @@
 package com.examples.parserdemo.repository;
 
 import com.examples.parserdemo.model.Item;
+import com.examples.parserdemo.model.ItemType;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -32,5 +33,10 @@ public class GeneralParser implements Parser {
         String price = Optional.ofNullable(document.getElementById("newBuyBoxPrice"))
                 .orElse(document.selectFirst(".offer-price")).text();
         return new Item(name, category, price);
+    }
+
+    @Override
+    public ItemType getItemType() {
+        return ItemType.GENERAL;
     }
 }

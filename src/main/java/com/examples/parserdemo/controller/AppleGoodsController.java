@@ -21,7 +21,7 @@ import java.util.stream.Stream;
  * Created by konstantin on 11.04.2020.
  */
 @Slf4j
-@RestController
+//@RestController
 @RequestMapping({"/parser/appleProducts", "/appleProducts"})
 public class AppleGoodsController {
     private final PageProvider provider;
